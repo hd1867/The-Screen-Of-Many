@@ -61,3 +61,7 @@ and open the template in the editor.
     -fx-background-color: #000000;
     -fx-border-color: #FFFFFF;
 }
+
+.label{
+    -fx-text-fill: #FFFFFF;
+}
