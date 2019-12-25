@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@ScreenOfMany.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="the.screen.of.many.MenuController">
+  <tabs>
+    <Tab text="Notes">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.12910798122065728" layoutX="110.0" layoutY="58.0" prefHeight="371.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <ListView fx:id="categoriesList" layoutX="-12.0" layoutY="20.0" prefHeight="369.0" prefWidth="175.0" stylesheets="@ScreenOfMany.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.30517711171662126" layoutX="57.0" layoutY="32.0" orientation="VERTICAL" prefHeight="337.0" prefWidth="417.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TableView fx:id="itemsTable" editable="true" layoutY="4.0" prefHeight="116.0" prefWidth="549.0" style="-fx-background-color: black;" stylesheets="@ScreenOfMany.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0">
+                                            <columns>
+                                              <TableColumn fx:id="nameColumn" prefWidth="151.0" text="Name" />
+                                              <TableColumn fx:id="descriptionColumn" prefWidth="954.0" text="Description" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: black;" stylesheets="@ScreenOfMany.css">
+                                       <children>
+                                          <TextArea fx:id="notesValue" layoutX="14.0" layoutY="25.0" prefHeight="251.0" prefWidth="523.0" promptText="Type notes here " wrapText="true" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="25.0" />
+                                          <Label fx:id="NotesLabel" layoutX="14.0" layoutY="6.0" text="Notes" textFill="#fffefe" AnchorPane.leftAnchor="14.0">
+                                             <font>
+                                                <Font name="Dubai Medium" size="12.0" />
+                                             </font></Label>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                              <ToolBar layoutX="1.0" prefHeight="42.0" prefWidth="550.0" style="-fx-background-color: black; -fx-border-color: white;" stylesheets="@ScreenOfMany.css" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0">
+                                 <items>
+                                    <Button fx:id="newItem" layoutX="244.0" layoutY="2.0" mnemonicParsing="false" onAction="#newItem" stylesheets="@ScreenOfMany.css" text="NEW">
+                                       <font>
+                                          <Font name="Dubai Medium" size="12.0" />
+                                       </font></Button>
+                                    <Button fx:id="saveItem" layoutX="305.0" layoutY="2.0" mnemonicParsing="false" onAction="#saveItem" stylesheets="@ScreenOfMany.css" text="SAVE">
+                                       <font>
+                                          <Font name="Dubai Medium" size="12.0" />
+                                       </font></Button>
+                                    <Button fx:id="deleteItem" layoutX="365.0" layoutY="2.0" mnemonicParsing="false" onAction="#deleteItem" stylesheets="@ScreenOfMany.css" text="DELETE">
+                                       <font>
+                                          <Font name="Dubai Medium" size="12.0" />
+                                       </font></Button>
+                                 </items>
+                              </ToolBar>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Combat">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

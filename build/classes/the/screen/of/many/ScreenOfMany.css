@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 25, 2019, 1:20:55 PM
+    Author     : Hendrick Ducasse
+*/
+
+.button {
+   -fx-background-radius: 10px;
+   -fx-text-fill: #000000;
+   -fx-background-color: #FFFFFF;
+}
+
+.table-column{
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: FFFFFF;
+}
+
+.table-view{
+    -fx-text-fill: FFFFFF;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-background-color: #111111;
+    -fx-border-color: #FFFFFF;
+}
+
+.toolbar{
+    -fx-border-color: FFFFFF;
+    -fx-border-width: 3px;
+}
+
+.list-view{
+   -fx-background-radius: 10px;
+   -fx-text-fill: #000000;
+   -fx-background-color: #FFFFFF;
+}
+
+.tab-pane>*.tab-header-area>*.tab-header-background {
+    -fx-background-color: -fx-outer-border, -fx-text-box-border,#000000;
+}
+
+.tab{
+    -fx-border-color: #FFFFFF;
+    -fx-border-radius: 4px;
+    -fx-border-width: 2px;
+    -fx-background-color: #000000;
+}
+
+.tab-label{
+    -fx-text-fill: #FFFFFF;
+}
+
+.list-view .list-cell{
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #000000;
+    -fx-border-color: #FFFFFF;
+}
