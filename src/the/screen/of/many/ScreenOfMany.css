@@ -36,7 +36,6 @@ and open the template in the editor.
 }
 
 .list-view{
-   -fx-background-radius: 10px;
    -fx-text-fill: #000000;
    -fx-background-color: #FFFFFF;
 }
@@ -64,4 +63,30 @@ and open the template in the editor.
 
 .label{
     -fx-text-fill: #FFFFFF;
+}
+
+.tree-view{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+}
+
+.tree-view .tree-cell{
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+}
+
+.scroll-bar{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
+}
+
+.scroll-bar .thumb{
+    -fx-background-color: #000000;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-background-color: #FFFFFF;
+}
+.split-pane:vertical > .split-pane-divider {
+    -fx-background-color: #FFFFFF;
 }
