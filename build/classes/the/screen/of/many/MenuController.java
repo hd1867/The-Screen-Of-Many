@@ -50,6 +50,8 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import model.Item;
 
+import javax.sound.sampled.*;
+
 
 /**
  *
@@ -66,6 +68,12 @@ public class MenuController implements Initializable {
     
     @FXML
     private Label notesLabel;
+
+    @FXML
+    private Label musicFile;
+
+    @FXML
+    private Label musicUrl;
     
     @FXML
     private ListView<String> categoriesList;
@@ -89,7 +97,7 @@ public class MenuController implements Initializable {
     
     private ListListener listListener;
     private TableListener tableListener;
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -173,6 +181,33 @@ public class MenuController implements Initializable {
             notesValue.setText(((Item)t1).getNotes());
         }
         
+    }
+
+    public void playMusicFile() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
+        Boolean playing = false;
+
+        Long currentFrame;
+        Clip clip;
+
+        // current status of clip
+        String status;
+
+        AudioInputStream audioInputStream;
+        String filePath = musicFile.getText();
+
+        // create AudioInputStream object
+        audioInputStream =
+                AudioSystem.getAudioInputStream(new File(filePath).getAbsoluteFile());
+
+        // create clip reference
+        clip = AudioSystem.getClip();
+
+        // open audioInputStream to the clip
+        clip.open(audioInputStream);
+
+        clip.loop(Clip.LOOP_CONTINUOUSLY);
+
+        clip.start();
     }
     
     public void initList(){

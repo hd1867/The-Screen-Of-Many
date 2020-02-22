@@ -113,11 +113,7 @@
                                           <TableColumn prefWidth="75.0" text="Name" />
                                           <TableColumn prefWidth="50.0" text="STR" />
                                           <TableColumn prefWidth="50.0" text="DEX" />
-                                          <TableColumn prefWidth="50.0" text="CON" />
-                                          <TableColumn prefWidth="50.0" text="INT" />
-                                          <TableColumn prefWidth="50.0" text="WIS" />
-                                          <TableColumn prefWidth="50.0" text="CHA" />
-                                       </columns></TableView>
+                                   </columns></TableView>
                                     <HBox layoutX="245.0" layoutY="406.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="259.0">
                                        <children>
                                           <Button layoutX="246.0" layoutY="366.0" mnemonicParsing="false" text="Add Combatant" />
@@ -219,14 +215,14 @@
                                              <children>
                                                 <HBox layoutX="245.0" layoutY="83.0" spacing="5.0">
                                                    <children>
-                                                      <Button layoutX="245.0" layoutY="96.0" mnemonicParsing="false" text="Play Music" />
-                                                      <TextField layoutX="319.0" layoutY="96.0" prefHeight="25.0" prefWidth="243.0" promptText="File Path" />
+                                                      <Button layoutX="245.0" layoutY="96.0" mnemonicParsing="false" onAction="#playMusicFile" text="Play Music" />
+                                                      <TextField fx:id="musicFile" layoutX="319.0" layoutY="96.0" prefHeight="25.0" prefWidth="243.0" promptText="File Path" />
                                                    </children>
                                                 </HBox>
                                                 <HBox layoutX="245.0" layoutY="117.0" spacing="5.0">
                                                    <children>
                                                       <Button layoutX="245.0" layoutY="96.0" mnemonicParsing="false" text="Play Music" />
-                                                      <TextField layoutX="319.0" layoutY="96.0" prefHeight="25.0" prefWidth="243.0" promptText="URL" />
+                                                      <TextField fx:id="musicUrl" layoutX="319.0" layoutY="96.0" prefHeight="25.0" prefWidth="243.0" promptText="URL" />
                                                    </children>
                                                 </HBox>
                                              </children>
