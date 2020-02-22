@@ -215,13 +215,13 @@
                                              <children>
                                                 <HBox layoutX="245.0" layoutY="83.0" spacing="5.0">
                                                    <children>
-                                                      <Button layoutX="245.0" layoutY="96.0" mnemonicParsing="false" onAction="#playMusicFile" text="Play Music" />
-                                                      <TextField fx:id="musicFile" layoutX="319.0" layoutY="96.0" prefHeight="25.0" prefWidth="243.0" promptText="File Path" />
+                                                      <Button fx:id="playMusicFile" layoutX="245.0" layoutY="96.0" mnemonicParsing="false" onAction="#playMusicFile" text="Play Music" />
+                                                      <TextField fx:id="musicFileLabel" layoutX="319.0" layoutY="96.0" prefHeight="25.0" prefWidth="243.0" promptText="File Path" />
                                                    </children>
                                                 </HBox>
                                                 <HBox layoutX="245.0" layoutY="117.0" spacing="5.0">
                                                    <children>
-                                                      <Button layoutX="245.0" layoutY="96.0" mnemonicParsing="false" text="Play Music" />
+                                                      <Button fx:id="playMusicURL" layoutX="245.0" layoutY="96.0" mnemonicParsing="false" text="Play Music" />
                                                       <TextField fx:id="musicUrl" layoutX="319.0" layoutY="96.0" prefHeight="25.0" prefWidth="243.0" promptText="URL" />
                                                    </children>
                                                 </HBox>

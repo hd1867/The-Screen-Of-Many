@@ -6,6 +6,7 @@
 
 package the.screen.of.many;
 
+import java.awt.*;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileFilter;
@@ -43,12 +44,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.control.TextField;
 import model.Item;
+
+import javax.sound.sampled.*;
 
 
 /**
@@ -63,9 +66,15 @@ public class MenuController implements Initializable {
     private Button deleteItem;
     @FXML
     private Button saveItem;
+
+    @FXML
+    private Button playMusicURL;
+
+    @FXML
+    private Button playMusicFile;
     
     @FXML
-    private Label notesLabel;
+    private TextField musicFileLabel;
     
     @FXML
     private ListView<String> categoriesList;
@@ -360,6 +369,57 @@ public class MenuController implements Initializable {
             System.out.println("Miscellany Added");
             
         }
+    }
+
+    String status = "none";
+    AudioInputStream audioInputStream;
+    long currentFrame = 0;
+    Clip clip;
+
+        public void playMusicFile() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
+            String filePath = musicFileLabel.getText();
+
+            if(status.equals("paused")){
+                clip.close();
+                audioInputStream = AudioSystem.getAudioInputStream(
+                        new File(filePath).getAbsoluteFile());
+                clip.open(audioInputStream);
+                clip.loop(Clip.LOOP_CONTINUOUSLY);
+                clip.setMicrosecondPosition(currentFrame);
+                //start the clip
+                clip.start();
+
+                status = "play";
+            }
+            else if(status.equals("play")){
+                currentFrame = clip.getMicrosecondPosition();
+                clip.stop();
+                status = "paused";
+            }
+            else {
+                // to store current position
+
+
+
+                System.out.println(filePath);
+                // current status of clip
+
+
+
+                // create AudioInputStream object
+                audioInputStream =
+                        AudioSystem.getAudioInputStream(new File(filePath).getAbsoluteFile());
+
+                // create clip reference
+                clip = AudioSystem.getClip();
+
+                clip.open(audioInputStream);
+
+                clip.loop(Clip.LOOP_CONTINUOUSLY);
+
+                status = "play";
+            }
+
     }
 }
     

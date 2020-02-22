@@ -65,6 +65,12 @@ public class MenuController implements Initializable {
     private Button deleteItem;
     @FXML
     private Button saveItem;
+
+    @FXML
+    private Button playMusicFileButton;
+
+    @FXML
+    private Button playMusicURLButton;
     
     @FXML
     private Label notesLabel;
